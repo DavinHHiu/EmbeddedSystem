@@ -1,0 +1,11 @@
+asyncio
+websockets
+pillow
+flask
+python-socketio
+opencv-python
+numpy
+django-cors-headers
+channels
+channels_redis
+adrf

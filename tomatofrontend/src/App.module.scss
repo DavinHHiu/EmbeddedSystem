@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Poetsen+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    font-family: "Carter One", system-ui;
+    background-color: #CC3636;
+    background-image: url("https://png.pngtree.com/png-vector/20191205/ourmid/pngtree-cartoon-red-tomato-vector-illustration-on-white-backgorund-png-image_2025736.jpg");
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .title {
+        color: #416D19;
+        font-size: 7rem;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+        background-image: linear-gradient(60deg, #CC3636, #FFF455); //416D19 FFF455
+        width: 100vw;
+        text-align: center;
+    }
+    
+    .image {
+        width: 640px;
+        height: 480px;
+        object-fit: cover;
+        border: 5px solid #416D19;
+        border-radius: 8px;
+    }
+
+    .result {
+        width: 100vw;
+        color: #416D19;
+        font-size: 3rem;
+        text-align: center;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+        background-image: linear-gradient(60deg, #CC3636, #FFF455); //416D19 FFF455
+    }
+}

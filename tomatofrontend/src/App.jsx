@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { w3cwebsocket as WebSocketClient } from 'websocket';
 import axios from 'axios';
+import style from './App.module.scss';
 
 const App = () => {
   const [imageSrc, setImageSrc] = useState('');
@@ -11,7 +12,6 @@ const App = () => {
 
     ws.onmessage = (event) => {
       const imageData = event.data;
-      // console.log('Received image data:', imageData);
 
       const data = {
         'image': imageData
@@ -23,9 +23,7 @@ const App = () => {
         }
       })
         .then((response) => {
-          // console.log(response);
           if (response.status === 200) {
-            console.log(response.data.result)
             setResult(response.data.result)
           }
         });
@@ -40,10 +38,10 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Arduino Image Viewer</h1>
-      {imageSrc && <img src={imageSrc} alt="Received Image" />}
-      {result && <span>{result}</span>}
+    <div className={style.container}>
+      <h1 className={style.title}>TOMATO DETECTOR</h1>
+      {1 && <img className={style.image} src={"https://hips.hearstapps.com/hmg-prod/images/beautiful-smooth-haired-red-cat-lies-on-the-sofa-royalty-free-image-1678488026.jpg?crop=0.668xw:1.00xh;0.119xw,0&resize=1200:*"} alt="Received Image" />}
+      {1 && <span className={style.result}>Healthy</span>}
     </div>
   );
 };

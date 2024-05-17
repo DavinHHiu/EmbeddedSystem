@@ -40,8 +40,8 @@ const App = () => {
   return (
     <div className={style.container}>
       <h1 className={style.title}>TOMATO DETECTOR</h1>
-      {1 && <img className={style.image} src={"https://hips.hearstapps.com/hmg-prod/images/beautiful-smooth-haired-red-cat-lies-on-the-sofa-royalty-free-image-1678488026.jpg?crop=0.668xw:1.00xh;0.119xw,0&resize=1200:*"} alt="Received Image" />}
-      {1 && <span className={style.result}>Healthy</span>}
+      {imageSrc && <img className={style.image} src={imageSrc} alt="Received Image" />}
+      {result && <span className={style.result}>{result}</span>}
     </div>
   );
 };
